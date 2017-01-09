@@ -1,0 +1,71 @@
+.home-title {
+  width: 100%;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.links {
+  margin: auto;
+  width: 800px;
+  height: 500px;
+}
+
+.links .year-title {
+  font-size: 20px;
+  padding: 5px;
+  display: flex;
+}
+
+.links h1 {
+  padding: 5px 0px;
+  border-bottom: solid 1px lightgray;
+  margin-bottom: 5px;
+}
+
+.links h1 span {
+  float: right;
+  font-size: 10px;
+  border: solid 1px gray;
+  color: gray;
+  padding: 1px 2px 2px 2px;
+  width: 32px;
+  text-align: center;
+}
+
+.links h1 span:hover {
+  cursor: pointer;
+  background: gray;
+  color: white;
+}
+
+.links .year-links {
+  font-size: 14px;
+  padding: 5px;
+  width: 25%;
+  font-family: 'Lora', serif;
+  color: gray;
+}
+
+.links .year-links div {
+  padding: 2px;
+}
+
+.links .year-links div:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.links .year-links span {
+  float: right;
+}
+
+.links .description {
+  color: gray;
+  float: right;
+  width: 75%;
+  padding: 5px 5px 5px 20px;
+  font-size: 14px;
+  font-family: 'Lora', serif;
+  text-align: justify;
+}

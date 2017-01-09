@@ -1,0 +1,99 @@
+.main-info-bar {
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.main-info-bar .book {
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 40px;
+  border-bottom: solid 2px gainsboro;
+}
+
+.main-info-bar .book .left-arrow {
+  float: left;
+  margin-right: 20px;
+}
+
+.main-info-bar .book .right-arrow {
+  float: right;
+  transform: rotate(180deg);
+  margin-top: -19px;
+}
+
+.main-info-bar .book img:hover {
+  cursor: pointer;
+}
+
+.scripture {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  height: 580px;
+  padding: 10px 0px;
+}
+
+.scripture .col {
+  -webkit-column-rule: 2px solid gainsboro;
+  -webkit-column-gap: 5px;
+  column-fill: auto;
+  height: 100%;
+  -webkit-column-count: 4;
+}
+
+.scripture .col:nth-child(4) {
+  border: none;
+}
+
+.scripture .col p {
+  margin: 0px 10px;
+  padding: 2.5px 5px 2.5px 5px;
+  font-size: 13px;
+  font-family: 'Lora', serif;
+  text-align: justify;
+  color: gray;
+  border: solid 1px white;
+}
+
+.scripture .col p:hover {
+  background: aliceblue;
+  border: solid 1px gainsboro;
+}
+
+.scripture .col p span {
+  color: black;
+}
+
+.scripture .col p span:hover {
+  cursor: pointer;
+}
+
+footer {
+  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+footer ul {
+  display: flex;
+  max-width: 1000px;
+  font-size: 14px;
+  justify-content: space-between;
+  color: gray;
+  border-top: solid 2px gainsboro;
+  padding-top: 20px;
+  width: 90%;
+  position: absolute;
+}
+
+footer ul li {
+  padding: 20px;
+  border: solid 2px gainsboro;
+}
+
+footer ul li:hover {
+  background: gainsboro;
+  color: white;
+  cursor: pointer;
+}
