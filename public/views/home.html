@@ -7,10 +7,10 @@
       <h1>Pre-Earth <span ng-click="minimize($event)">hide</span></h1>
       <div class="year-title">
         <div class="year-links">
-          <div>Revelations <span>9:1-17</span></div>
-          <div>Genesis <span>1</span></div>
-          <div>Moses <span>2</span></div>
-          <div>Abraham <span>4</span></div>
+          <div ui-sref="word({book: book, chap: chap, vers: vers})" ng-click="getScripture($event)">Genesis <span>1:1-31</span></div>
+          <div ui-sref="word({book: book, chap: chap, vers: vers})" ng-click="getScripture($event)">Genesis <span>2:1-25</span></div>
+          <div ui-sref="word({book: book, chap: chap, vers: vers})" ng-click="getScripture($event)">Genesis <span>3:1-24</span></div>
+          <div ui-sref="word({book: book, chap: chap, vers: vers})" ng-click="getScripture($event)">Genesis <span>4:1-26</span></div>
         </div>
         <div class="description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

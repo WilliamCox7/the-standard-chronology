@@ -9,7 +9,7 @@ angular.module('standardChronology', ['ui.router'])
     })
     .state('word', {
       templateUrl: '../views/word.html',
-      url: '/theWord',
+      url: '/:book/Ch:chap/Vs:vers',
       controller: 'wordCtrl'
     });
 });

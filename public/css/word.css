@@ -13,32 +13,40 @@
 
 .main-info-bar .book .left-arrow {
   float: left;
-  margin-right: 20px;
+  margin-right: 10px;
+  padding: 10px;
+  margin-top: -12px;
+  margin-left: -10px;
+  border: solid 2px white;
 }
 
 .main-info-bar .book .right-arrow {
   float: right;
   transform: rotate(180deg);
-  margin-top: -19px;
+  margin-top: -32px;
+  margin-right: -10px;
+  padding: 10px;
+  border: solid 2px white;
 }
 
 .main-info-bar .book img:hover {
   cursor: pointer;
+  fill: blue;
+  border-color: gainsboro;
 }
 
 .scripture {
   display: flex;
   width: 1000px;
   margin: auto;
-  height: 580px;
   padding: 10px 0px;
 }
 
 .scripture .col {
   -webkit-column-rule: 2px solid gainsboro;
+  -webkit-column-span: all;
   -webkit-column-gap: 5px;
-  column-fill: auto;
-  height: 100%;
+  //column-fill: auto;
   -webkit-column-count: 4;
 }
 
@@ -46,13 +54,18 @@
   border: none;
 }
 
+.scripture .col .hdr {
+  font-style: italic;
+}
+
 .scripture .col p {
   margin: 0px 10px;
-  padding: 2.5px 5px 2.5px 5px;
   font-size: 13px;
+  padding: 2px;
   font-family: 'Lora', serif;
   text-align: justify;
   color: gray;
+  line-height: 14px;
   border: solid 1px white;
 }
 
@@ -84,6 +97,7 @@ footer ul {
   border-top: solid 2px gainsboro;
   padding-top: 20px;
   width: 90%;
+  margin-bottom: 40px;
   position: absolute;
 }
 
