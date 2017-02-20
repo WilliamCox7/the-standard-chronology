@@ -1,8 +1,17 @@
 <main>
+  <div class="home-button">
+    <img ui-sref="home" src="../images/home.jpg" />
+  </div>
   <section class="main-info-bar">
     <div class="book">
       <img class="left-arrow" src="../images/arrow.svg"/>
-      <h1>{{reference}}</h1>
+      <div class="search-box">
+        <h1>{{reference}}</h1>
+        <form>
+          <input type="text" placeholder="ex: Genesis 1:5-20" />
+          <input type="submit" value="Search" ui-sref="word({book: book, chap: chap, vers: vers})" ng-click="saveReference($event)" />
+        </form>
+      </div>
       <img class="right-arrow" src="../images/arrow.svg"/>
     </div>
   </section>
@@ -10,7 +19,7 @@
     <div class="col">
       <p class="hdr">{{header}}</p>
       <p ng-repeat="(key, value) in verses">
-        <span>{{key}} </span>{{value}}
+        <span class="span1">{{key}} </span><span class="span2">{{value}}</span>
       </p>
     </div>
   </section>

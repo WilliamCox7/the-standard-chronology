@@ -7,23 +7,57 @@
 .main-info-bar .book {
   font-size: 20px;
   padding: 20px;
+  position: relative;
   margin-top: 40px;
   border-bottom: solid 2px gainsboro;
+}
+
+.home-button {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.home-button img {
+  width: 40px;
+  margin: auto;
+  z-index: 1;
+}
+
+.home-button img:hover {
+  cursor: pointer;
 }
 
 .main-info-bar .book .left-arrow {
   float: left;
   margin-right: 10px;
   padding: 10px;
-  margin-top: -12px;
+  margin-top: -8px;
   margin-left: -10px;
   border: solid 2px white;
+}
+
+.main-info-bar .book .search-box {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 90px);
+}
+
+.main-info-bar .book .search-box form {
+  z-index: 1;
+}
+
+.main-info-bar .book h1 {
+  margin-top: 5px;
 }
 
 .main-info-bar .book .right-arrow {
   float: right;
   transform: rotate(180deg);
-  margin-top: -32px;
+  margin-top: -36px;
   margin-right: -10px;
   padding: 10px;
   border: solid 2px white;
@@ -46,7 +80,6 @@
   -webkit-column-rule: 2px solid gainsboro;
   -webkit-column-span: all;
   -webkit-column-gap: 5px;
-  //column-fill: auto;
   -webkit-column-count: 4;
 }
 
@@ -74,11 +107,15 @@
   border: solid 1px gainsboro;
 }
 
-.scripture .col p span {
+.scripture .col p .span1 {
   color: black;
 }
 
-.scripture .col p span:hover {
+.scripture .col p .span2 {
+  color: gray;
+}
+
+.scripture .col p .span1:hover {
   cursor: pointer;
 }
 
@@ -95,7 +132,7 @@ footer ul {
   justify-content: space-between;
   color: gray;
   border-top: solid 2px gainsboro;
-  padding-top: 20px;
+  padding: 13px;
   width: 90%;
   margin-bottom: 40px;
   position: absolute;

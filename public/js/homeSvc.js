@@ -1,27 +1,15 @@
 angular.module('standardChronology').service('homeSvc', function($http) {
 
-  var verses = {};
-  var ref, header;
-
-  this.saveVerses = function(data, hdr) {
-    verses = data;
-    header = hdr;
-  }
-
-  this.getVerses = function() {
-    return verses;
-  }
-
-  this.getHeader = function() {
-    return header;
-  }
-
   this.getReference = function() {
-    return ref;
+    return JSON.parse(localStorage["current_verses"]);
+  }
+
+  this.saveReference = function(reference) {
+    localStorage["current_verses"] = JSON.stringify(reference);
   }
 
   this.getScripture = function(reference) {
-    ref = reference;
+    localStorage["current_verses"] = JSON.stringify(reference);
     var refArr = reference.split(" ");
     var secArr = refArr[1].split(":");
     var book = refArr[0];

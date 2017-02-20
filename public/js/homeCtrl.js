@@ -15,8 +15,14 @@ angular.module('standardChronology').controller('homeCtrl', function($scope, hom
     }
   }
 
-  $scope.getScripture = function($event) {
-    var reference = angular.element($event.currentTarget)[0].innerText;
+  $scope.getScripture = function($event, type) {
+    var reference;
+    if (type === 'form') {
+      reference = angular.element($event.currentTarget)[0].previousElementSibling.value;
+    } else if (type === 'link') {
+      reference = angular.element($event.currentTarget)[0].innerText;
+    }
+    localStorage["current_verses"] = JSON.stringify(reference);
     var refArr = reference.split(" ");
     var secArr = refArr[1].split(":");
     var startV, endV;
@@ -27,15 +33,6 @@ angular.module('standardChronology').controller('homeCtrl', function($scope, hom
       startV = secArr[1].split("-")[0];
       endV = secArr[1].split("-")[1];
     }
-    homeSvc.getScripture(reference).then(function(result) {
-      var vs = result.data.verses;
-      var obj = {};
-      if (startV) {
-        for (var i = startV; i <= endV; i++) { obj[i] = vs[i]; }
-        startV = null; endV = null;
-      }
-      homeSvc.saveVerses(obj, result.data.header);
-    });
   }
 
 });
